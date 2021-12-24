@@ -19,6 +19,7 @@ function playRound(playerSelection,computerSelection){
         return(0);
     }else{
         console.log(playerSelection+" is Wrong entry!!!");
+        return(3);
     }
 }
 
@@ -32,6 +33,8 @@ function gameRoundHelper(){
     }else if(result===0){
         computerScore++;
         console.log("Lost the round!!!"+computerSelection+" beats "+playerSelection);
+    }else if(result===3){
+        gameRoundHelper();
     }else{
         console.log("Draw!!! Both selection is "+computerSelection);
     }
